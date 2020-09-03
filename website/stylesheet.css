@@ -4,7 +4,7 @@ body {
   
   h1 {
     color: #b57614;
-    margin-left: 300px;
+    text-align: center;
   }
   h2{
       color: #b57614;
@@ -18,7 +18,14 @@ body {
   }
   p{
     color: #427b58;
+  }  
+    a {
+        font-size-adjust: 70px;
+      color: #f2e5bc;
   }
+
+intro_text{}
+
 
   .btn-group button {
     background-color: #3c3836; /* gray button */
