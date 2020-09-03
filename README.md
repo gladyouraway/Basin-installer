@@ -1,2 +1,2 @@
 # afropony
-made by Ben en Antonio
+made by gladyouraway and mosk0u
