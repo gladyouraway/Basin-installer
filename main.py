@@ -88,7 +88,7 @@ def Gui():
     # LOgin
     app.addLabelEntry("User" + " " * 8)      #<--                # ****  labelname is very important
     app.addLabelSecretEntry("Password")
-
+    
     def press(button):
         if button == "Cancel":
             app.stop()
@@ -97,17 +97,19 @@ def Gui():
         elif button == "Submit":
             username = app.getEntry("User" + " " * 8)   #<--     # ****  labelname is very important
             password = app.getEntry("Password")
+            app.addImage("image", "images\Loading.gif", 11)
+
                    
     
         if username == "Mosk0u" and password == "69" or username == "GladurGay" and password == "69":
 
             app.infoBox("Yep", "pwd Looks good!")
-            app.addImage("image", "images\Loading.gif", 11)
 
-            clear()
+            clear()                                               # clear Window
 
-            time.sleep(2)
-            MainGui()
+            app.stop()                                            # stop Login GUI
+
+            MainGui()                                             # Launch Main Menu
             
         else:
             app.errorBox("Nope", "go suck a dick", app.soundError())
