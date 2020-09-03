@@ -22,7 +22,7 @@ def clear():
 
 
 
-# ================================================== - THA ANIMATION
+# ================================================== - THA LOADING ANIMATION
 
 
 
@@ -38,7 +38,7 @@ def load():
     print("                        /  /%sXXXXXXXXXXX%s\ \/ /%sXXXXXXXXXXX%s\  \ " % (fg(1), attr(0),fg(1), attr(0)))
     print("                       /  /%s000000000000%s/    \%s000000000000%s\  \ " % (fg(1), attr(0),fg(1), attr(0)))
     print("                       |  \%sXXXXXXXXXXX%s/ _  _ \%sXXXXXXXXXXX%s/  |" % (fg(1), attr(0),fg(1), attr(0)))
-    print("                     __|\_____   ___   //  \\   ___   _____/|__")
+    print("                     __|\_____   ___   /    \   ___   _____/|__")
     print("                     [_       \     \  X    X  /     /       _]")
     print("                     __|     \ \                    / /     |__")
     print("                     [____  \ \ \   ____________   / / /  ____]")
@@ -69,15 +69,18 @@ def load():
 
     
         
-# ================================================== - THA GUI
+# ================================================== - THA GUI 
 
 def Gui():
 
     app = gui("AfroPony", "400x200")
-    app.setBg("Gray") # black, grey, red, orange, white, green, blue, yellow ....
+    app.setBg("grey") # black, grey, red, orange, white, green, blue, yellow .... 
     app.setFg("white")
     app.setFont(16)
     
+    # -------------------------------------
+
+
     
 
     # Labels
@@ -86,24 +89,34 @@ def Gui():
     app.setLabelFg("title", "white")
 
     # LOgin
-    app.addLabelEntry("User" + " " * 8)
+    app.addLabelEntry("User" + " " * 8)      #<--                # ****  labelname is very important
     app.addLabelSecretEntry("Password")
 
     def press(button):
         if button == "Cancel":
             app.stop()
+        elif button == "Submit":
+            username = app.getEntry("User" + " " * 8)   #<--     # ****  labelname is very important
+            password = app.getEntry("Password")
+        elif button == "suck a dick":
+            app.errorBox("u are GEA", "why are u gea?")
+            app.addImage("image", "\images\gayImage.gif")
+            
+    
+        if username == "Mosk0u" and password == "69":
+            app.infoBox("Yep", "pwd Looks good!")
         else:
-            usr = app.getEntry("Username")
-            pwd = app.getEntry("Password")
-            print("User:", usr, "Pass:", pwd)
+            app.errorBox("Nope", "go suck a dick")
 
-    app.addButtons(["Submit", "Cancel"], press)
+            
+
+    app.addButtons(["Submit", "Cancel", "suck a dick"], press)
 
 
 
 
     app.go()
-
+    print("lol")
 
 # ================================================== 
 
