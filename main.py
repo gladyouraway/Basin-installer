@@ -26,7 +26,7 @@ def clear():
 
 
 
-def load():
+def Load():
     print (" " * 34 + '%sLoading Program%s    V_1.0' % (fg(1), attr(0)))
     time.sleep(2)
 
@@ -92,12 +92,12 @@ def Gui():
     def press(button):
         if button == "Cancel":
             app.stop()
-
+            clear()
+            
         elif button == "Submit":
             username = app.getEntry("User" + " " * 8)   #<--     # ****  labelname is very important
             password = app.getEntry("Password")
-            
-            
+                   
     
         if username == "Mosk0u" and password == "69" or username == "GladurGay" and password == "69":
 
@@ -107,7 +107,7 @@ def Gui():
             clear()
 
             time.sleep(2)
-            MainGui(username)
+            MainGui()
             
         else:
             app.errorBox("Nope", "go suck a dick", app.soundError())
@@ -117,15 +117,15 @@ def Gui():
     app.addButtons(["Submit", "Cancel"], press)
 
     app.go()
-    print("lol")
 
 # ================================================== 
 
-def MainGui(Name):
-    print(str(time.asctime()) + ":  Acces Granted !")
+def MainGui():
+    print(str(time.asctime()) + ":  %sAccess Granted%s %s!%s" % (fg(3), attr(0), fg(1), attr(0)))
+
+    
+    
 
 
-
-
-load()
+Load()
 Gui()
