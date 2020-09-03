@@ -1,4 +1,4 @@
 # afropony
-an installer to make your new windows or linux install ready.
-made by gladyouraway and mosk0u 
+an installer to make your new windows or linux install all the programs u need without going to each single website.
+made by gladyouraway and Mosk0u 
 
