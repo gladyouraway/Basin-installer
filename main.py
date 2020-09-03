@@ -80,9 +80,6 @@ def Gui():
     
     # -------------------------------------
 
-
-    
-
     # Labels
     app.addLabel("title", "Please Login",)
     app.setLabelBg("title", "Black")
@@ -95,30 +92,39 @@ def Gui():
     def press(button):
         if button == "Cancel":
             app.stop()
+
         elif button == "Submit":
             username = app.getEntry("User" + " " * 8)   #<--     # ****  labelname is very important
             password = app.getEntry("Password")
-        elif button == "suck a dick":
-            app.errorBox("u are GEA", "why are u gea?")
-            app.addImage("image", "\images\gayImage.gif")
+            
             
     
-        if username == "Mosk0u" and password == "69":
-            app.infoBox("Yep", "pwd Looks good!")
-        else:
-            app.errorBox("Nope", "go suck a dick")
+        if username == "Mosk0u" and password == "69" or username == "GladurGay" and password == "69":
 
+            app.infoBox("Yep", "pwd Looks good!")
+            app.addImage("image", "images\Loading.gif", 11)
+
+            clear()
+
+            time.sleep(2)
+            MainGui(username)
+            
+        else:
+            app.errorBox("Nope", "go suck a dick", app.soundError())
             
 
-    app.addButtons(["Submit", "Cancel", "suck a dick"], press)
 
-
-
+    app.addButtons(["Submit", "Cancel"], press)
 
     app.go()
     print("lol")
 
 # ================================================== 
+
+def MainGui(Name):
+    print(str(time.asctime()) + ":  Acces Granted !")
+
+
 
 
 load()
