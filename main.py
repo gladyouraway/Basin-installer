@@ -77,6 +77,7 @@ def Gui():
     app.setBg("grey") # black, grey, red, orange, white, green, blue, yellow .... 
     app.setFg("white")
     app.setFont(16)
+    app.setIcon("images/Icon.ico")
     
     # -------------------------------------
 
@@ -103,11 +104,17 @@ def Gui():
     
         if username == "Mosk0u" and password == "69" or username == "GladurGay" and password == "69":
 
+            Dfile = open("data.txt", "a")
+            
+            Dfile.writelines([username, "\n", password])
+            Dfile.close()
+
+
             app.infoBox("Yep", "pwd Looks good!")
 
             clear()                                               # clear Window
 
-            app.stop()                                            # stop Login GUI
+            app.stop(True)                                            # stop Login GUI
 
             MainGui()                                             # Launch Main Menu
             
@@ -123,7 +130,25 @@ def Gui():
 # ================================================== 
 
 def MainGui():
+    
     print(str(time.asctime()) + ":  %sAccess Granted%s %s!%s" % (fg(3), attr(0), fg(1), attr(0)))
+    print("\n" + str(time.asctime()) + ":  %sUsername and Password saved%s %s!%s" % (fg(3), attr(0), fg(1), attr(0)))
+
+    # ------------------
+
+    app = gui("AfroPony", "1000x500")  #  X - Y
+    app.setBg("grey") # black, grey, red, orange, white, green, blue, yellow .... 
+    app.setFg("white")
+    app.setFont(16)
+    app.setIcon("images/Icon.ico")
+
+    # ------------------
+
+
+
+
+
+    app.go()
 
     
     
