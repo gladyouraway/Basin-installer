@@ -103,8 +103,8 @@ def Gui():
                    
     
         if username == "Mosk0u" and password == "69" or username == "GladurGay" and password == "69":
-
-            Dfile = open("data.txt", "a")
+            
+            Dfile = open("data.txt", "a")           # Save Psw to data.txt file
             
             Dfile.writelines([username, "\n", password])
             Dfile.close()
@@ -131,10 +131,19 @@ def Gui():
 
 def MainGui():
     
-    print(str(time.asctime()) + ":  %sAccess Granted%s %s!%s" % (fg(3), attr(0), fg(1), attr(0)))
+    print("\n" + str(time.asctime()) + ":  %sAccess Granted%s %s!%s" % (fg(3), attr(0), fg(1), attr(0)))
     print("\n" + str(time.asctime()) + ":  %sUsername and Password saved%s %s!%s" % (fg(3), attr(0), fg(1), attr(0)))
 
     # ------------------
+
+    Dfile = open(r"data.txt", "r")
+
+    User = Dfile.readline(6)
+
+    print("\n" + str(time.asctime()) + ":  Logged in as : " + str(User))
+
+    Dfile.close()
+
 
     app = gui("AfroPony", "1000x500")  #  X - Y
     app.setBg("grey") # black, grey, red, orange, white, green, blue, yellow .... 
