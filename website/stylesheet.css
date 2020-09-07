@@ -7,7 +7,6 @@
 }
 
 
-
 html,body{
   margin: 0%;
   padding: 0;
@@ -31,6 +30,13 @@ html,body{
 .main-nav li{
   padding: 0 5%;
   text-size-adjust: 40px;
+}
+
+img {
+  display: block;
+  border-radius: 8px;
+  margin-left: 60%;
+  width: 30%;
 }
 
 .main-nav{
@@ -90,14 +96,15 @@ h1 small{
   }
   p{
     color: #f2e5bc;
-  }  
+  }
+
   a {
         font-size-adjust: 70px;
       color: #f2e5bc;
   }
 
   .intro_text{
-    text-align: right;
+    text-align: left;
   }
 
   .btn-group button {
