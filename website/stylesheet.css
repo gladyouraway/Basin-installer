@@ -2,7 +2,7 @@
 
 *{
   box-sizing: border-box;
-  font-family: monospace;
+  font-family: 'roboto', sans-serif;
   
 }
 
@@ -30,6 +30,7 @@ html,body{
 
 .main-nav li{
   padding: 0 5%;
+  text-size-adjust: 40px;
 }
 
 .main-nav{
@@ -46,7 +47,7 @@ html,body{
 
 .main_header{
   background-color: rgba(0, 0, 0, .6) ;
-  background-image: url("web-icons/header-1.jpg ");
+  background-image: url("web-icons/header-main.jpg ");
   background-blend-mode: multiply;
   background-size: cover;
   padding-bottom: 30px;
@@ -60,13 +61,23 @@ html,body{
 }
 
 body {
-    background-color: #3c3836;
+    background-color:  #33334d;
   }
   
- h1 {
-    text-align: center;
-    font-size-adjust: 90px;
-  }
+h1 {
+  text-align: center;
+  font-size-adjust: 90px;
+  color: #F8B195 ;
+}
+h1 big{
+  color: #F8B195 ;
+}
+
+h1 small{
+  color: #F8B195 ;
+}
+
+
   h2{
       color: #b57614;
       margin-left: 150px;
@@ -78,9 +89,9 @@ body {
       color: #f2e5bc;
   }
   p{
-    color: #427b58;
+    color: #f2e5bc;
   }  
-    a {
+  a {
         font-size-adjust: 70px;
       color: #f2e5bc;
   }
