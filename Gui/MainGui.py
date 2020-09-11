@@ -9,6 +9,8 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+import time
+import os
 
 
 class Ui_Afropony(object):
@@ -76,6 +78,7 @@ class Ui_Afropony(object):
     def retranslateUi(self, Afropony):
         _translate = QtCore.QCoreApplication.translate
         Afropony.setWindowTitle(_translate("Afropony", "Afropony"))
+# ================================================================
 
 
 if __name__ == "__main__":
