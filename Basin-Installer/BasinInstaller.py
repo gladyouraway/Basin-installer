@@ -29,7 +29,7 @@ Main_xtra = "purple3"
 # -- Main GUI stuff
 
 gui.title("Basin-Installer")
-gui.configure(background= "gray") 
+gui.configure(background= "gray71") 
 gui.attributes('-topmost', True)
 gui.resizable(False, False)
 gui.update()
@@ -48,6 +48,12 @@ y = (hs/2) - (h/2)
 
 gui.geometry('%dx%d+%d+%d' % (w, h, x, y))
 
+# -- BG
+
+background_image = PhotoImage(file = "BG\BasinTest.gif")      # epic
+background_label = Label(gui, image=background_image)
+background_label.place(x=0, y=0, relwidth=1, relheight=1)
+
 
 # -- -- --
 
@@ -63,11 +69,19 @@ def wait(s):               # To be able to wait
 def Create_THA_STUFF():    # to create tha stuff (Buttons and shit)
 
     # -- Create THA mfkn epicc MAIN buttton 
-
     Button_MAIN = Button(gui, text="Main", font=("Arial Rounded MT Bold", 10), bg="gold", fg="Black", width=12, height=1)
-    Button_MAIN.place(x=1, y=1)
+    Button_MAIN.place(x=0, y=1)
+
+    # -- Create Tha Xtra Button
+    Button_EXTRA = Button(gui, text="Extra", font=("Arial Rounded MT Bold", 10), bg="gold", fg="Black", width=12, height=1)
+    Button_EXTRA.place(x=106, y=1)
+
+    # -- Create a useless HELP button that does absolutely nothing
 
 
+    # add a frame For that Extra epicness
+    Frame_1 = LabelFrame(gui, width=400, height=2, bg="black")
+    Frame_1.place(x=1,y=27)
 
 
 
