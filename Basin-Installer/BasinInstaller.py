@@ -51,17 +51,21 @@ gui.geometry('%dx%d+%d+%d' % (w, h, x, y))
 
 # -- -- --
 
+
+def Test():
+    print("does sometin")
+
 def Create_Menu():
 
     # create a menu Bar 
 
     Menu_Bar = Menu(gui)
-    gui.config(Menu=Menu_Bar)
+    gui.config(menu=Menu_Bar)
 
     # Add some optiooonss
 
-    Main_menu = Menu(Menu_Bar)
-    Menu_Bar.add_cascade(Label="Main", menu=Main_menu)
+    Main_menu = Menu(Menu_Bar, tearoff=0)
+    Menu_Bar.add_cascade(label="Main", menu=Main_menu)
 
 
 
