@@ -70,18 +70,19 @@ def Create_THA_STUFF():    # to create tha stuff (Buttons and shit)
 
     # -- Create THA mfkn epicc MAIN buttton 
     Button_MAIN = Button(gui, text="Main", font=("Arial Rounded MT Bold", 10), bg="gold", fg="Black", width=12, height=1)
-    Button_MAIN.place(x=0, y=1)
+    Button_MAIN.place(x=0, y=0)
 
     # -- Create Tha Xtra Button
-    Button_EXTRA = Button(gui, text="Extra", font=("Arial Rounded MT Bold", 10), bg="gold", fg="Black", width=12, height=1)
-    Button_EXTRA.place(x=106, y=1)
+    Button_EXTRA = Button(gui, text="Extra", font=("Arial Rounded MT Bold", 10), bg="gray77", fg="Black", width=12, height=1)
+    Button_EXTRA.place(x=106, y=0)
 
     # -- Create a useless HELP button that does absolutely nothing
-
+    Button_HELP = Button(gui, text="Help", font=("Arial Rounded MT Bold", 10), bg="gray77", fg="Black", width=12, height=1)
+    Button_HELP.place(x=212, y=0)
 
     # add a frame For that Extra epicness
-    Frame_1 = LabelFrame(gui, width=400, height=2, bg="black")
-    Frame_1.place(x=1,y=27)
+    Frame_1 = LabelFrame(gui, width=317, height=2, bg="black")
+    Frame_1.place(x=1,y=26)
 
 
 
