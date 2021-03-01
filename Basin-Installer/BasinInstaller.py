@@ -22,14 +22,14 @@ gui = Tk()
 
 # --  Main colors
 
-Main_BG = "black"                         # lime green, lawn green, ivory2, snow3, seashell2, SteelBlue1, gold, SlateBlue2
+Main_BG = "gold"                         # lime green, lawn green, ivory2, snow3, seashell2, SteelBlue1, gold, SlateBlue2
 Main_FG = "gray71"
-Main_Extra = "purple3"
+Main_xtra = "purple3"
 
 # -- Main GUI stuff
 
 gui.title("Basin-Installer")
-gui.configure(background= "black") 
+gui.configure(background= "gray") 
 gui.attributes('-topmost', True)
 gui.resizable(False, False)
 gui.update()
@@ -55,17 +55,17 @@ gui.geometry('%dx%d+%d+%d' % (w, h, x, y))
 def Test():
     print("does sometin")
 
-def Create_Menu():
+def wait(s):               # To be able to wait 
+    gui.update()
+    sleep(s)
+    gui.update()
 
-    # create a menu Bar 
+def Create_THA_STUFF():    # to create tha stuff (Buttons and shit)
 
-    Menu_Bar = Menu(gui)
-    gui.config(menu=Menu_Bar)
+    # -- Create THA mfkn epicc MAIN buttton 
 
-    # Add some optiooonss
-
-    Main_menu = Menu(Menu_Bar, tearoff=0)
-    Menu_Bar.add_cascade(label="Main", menu=Main_menu)
+    Button_MAIN = Button(gui, text="Main", font=("Arial Rounded MT Bold", 10), bg="gold", fg="Black", width=12, height=1)
+    Button_MAIN.place(x=1, y=1)
 
 
 
@@ -79,6 +79,6 @@ def Create_Menu():
 
 # --
 
-Create_Menu()
+Create_THA_STUFF()
 
 gui.mainloop() 
