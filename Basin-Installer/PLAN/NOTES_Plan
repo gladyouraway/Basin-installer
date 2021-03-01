@@ -1,0 +1,10 @@
+
+
+Program description:
+
+Tkinter Gui with "classes"/"profiles" (eg. programmer, Producer, Gamer, other and custom.) that auto-install needed programs. And extra options such as; 
+Windows-Debloat (to remove shit like OneDrive) and other usefull tools. 
+
+# --------------------------------------
+1. create a gui with tkinter or QT?
+2. 
