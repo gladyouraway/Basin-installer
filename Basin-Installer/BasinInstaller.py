@@ -62,6 +62,7 @@ background_label.place(x=0, y=0, relwidth=1, relheight=1)
 
 def Test():
     print("does sometin")
+    messagebox.showwarning("Nigga detected!", "Hands off!")
 
 def wait(s):               # To be able to wait 
     gui.update()
