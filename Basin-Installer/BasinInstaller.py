@@ -28,9 +28,11 @@ Main_xtra = "purple3"
 
 # -- Main GUI stuff
 
+Top_STATE = True
+
 gui.title("Basin-Installer")
 gui.configure(background= "gray71") 
-gui.attributes('-topmost', True)
+gui.attributes('-topmost', Top_STATE)
 gui.resizable(False, False)
 gui.update()
 
@@ -68,23 +70,33 @@ def wait(s):               # To be able to wait
 
 def Create_THA_STUFF():    # to create tha stuff (Buttons and shit)
 
+
+    # --
+
+    All_Button_HowBig = 10  # How big Letters are of Buttons
+
+
     # -- Create THA mfkn epicc MAIN buttton 
-    Button_MAIN = Button(gui, text="Main", font=("Arial Rounded MT Bold", 10), bg="gold", fg="Black", width=12, height=1)
+    Button_MAIN = Button(gui, text="Main", font=("Arial Rounded MT Bold", All_Button_HowBig), bg="gold", fg="Black", width=12, height=1, command=Test)
     Button_MAIN.place(x=0, y=0)
 
     # -- Create Tha Xtra Button
-    Button_EXTRA = Button(gui, text="Extra", font=("Arial Rounded MT Bold", 10), bg="gray77", fg="Black", width=12, height=1)
+    Button_EXTRA = Button(gui, text="Extra", font=("Arial Rounded MT Bold", All_Button_HowBig), bg="gray77", fg="Black", width=12, height=1, command=Test)
     Button_EXTRA.place(x=106, y=0)
 
     # -- Create a useless HELP button that does absolutely nothing
-    Button_HELP = Button(gui, text="Help", font=("Arial Rounded MT Bold", 10), bg="gray77", fg="Black", width=12, height=1)
+    Button_HELP = Button(gui, text="Help", font=("Arial Rounded MT Bold", All_Button_HowBig), bg="gray77", fg="Black", width=12, height=1, command=Test)
     Button_HELP.place(x=212, y=0)
 
     # add a frame For that Extra epicness
-    Frame_1 = LabelFrame(gui, width=317, height=2, bg="black")
-    Frame_1.place(x=1,y=26)
+    Frame_1 = LabelFrame(gui, width=600, height=2, bg="black")
+    Frame_1.place(x=1, y=26)
 
+    # add an Epic canvas 
+    Epic_Canvas = Canvas(gui, width=277, height=22, bg="black")
+    Epic_Canvas.place(x=318, y=0)
 
+    
 
 
 
