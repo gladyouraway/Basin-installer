@@ -62,7 +62,7 @@ background_label.place(x=0, y=0, relwidth=1, relheight=1)
 
 def Test():
     print("does sometin")
-    messagebox.showwarning("Nigga detected!", "Hands off!")
+    
 
 def wait(s):               # To be able to wait 
     gui.update()
@@ -93,9 +93,10 @@ def Create_THA_STUFF():    # to create tha stuff (Buttons and shit)
     Frame_1 = LabelFrame(gui, width=600, height=2, bg="black")
     Frame_1.place(x=1, y=26)
 
-    # add an Epic canvas 
-    Epic_Canvas = Canvas(gui, width=277, height=22, bg="black")
-    Epic_Canvas.place(x=318, y=0)
+    # add an Epic LOGO
+    BasinLogo_Image = PhotoImage(file = "BG\BasinTest2.gif")
+    BasinLogo_label = Label(gui, image=BasinLogo_Image, width=277, height=22)
+    BasinLogo_label.place(x=318, y=0)
 
     
 
